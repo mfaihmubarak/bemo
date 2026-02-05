@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Peta Tematik Bus - BEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- WAJIB AGAR NAV HIDUP -->
+  <script defer src="js/main.js"></script>
+
+  <script defer src="js/petatematik.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+  <h2>🗺️ Peta Tematik Transportasi Bandung</h2>
+
+  <!-- Pilihan Layer -->
+  <div class="card" style="padding:12px; margin:16px 0;">
+    <strong>Tampilkan Rute:</strong><br><br>
+
+    <label><input type="checkbox" onchange="toggleLayer('tmb')"> TMB</label><br>
+    <label><input type="checkbox" onchange="toggleLayer('transjabar')"> Trans Jabar</label><br>
+    <label><input type="checkbox" onchange="toggleLayer('bandros')"> Bandros</label><br>
+    <label><input type="checkbox" onchange="toggleLayer('busschool')"> Bus Sekolah</label><br>
+    <label><input type="checkbox" onchange="toggleLayer('angkot')"> Angkot</label>
+  </div>
+
+  <!-- MAP -->
+  <div id="map" style="height:450px; border-radius:16px;"></div>
+  
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button onclick="goTo('routes.html')">➕</button>
+  <button onclick="goTo('notifications.html')">🔔</button>
+  <button onclick="goTo('profile.html')">👤</button>
+</nav>
+
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+
+</body>
+</html>

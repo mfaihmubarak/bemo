@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Peta - BEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/map.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+  <h2>🗺️ Peta Transportasi</h2>
+
+  <div class="card" style="padding:12px;">
+    <input type="text" id="lokasiTujuan" placeholder="Cari lokasi...">
+    <button onclick="cariLokasi()">Cari</button>
+    <button onclick="lokasiSaya()">Lokasi Saya</button>
+  </div>
+
+  <div class="maps-preview">
+    <iframe
+      id="mapFrame"
+      width="100%"
+      height="300"
+      style="border:0; border-radius:12px;"
+      loading="lazy"
+      allowfullscreen
+      src="https://www.google.com/maps?q=Bandung&output=embed">
+    </iframe>
+  </div>
+</div>
+
+<script>
+function initMap(){
+  const lat = sessionStorage.getItem("userLat");
+  const lng = sessionStorage.getItem("userLng");
+
+  if(lat && lng){
+    const posisi = { lat: parseFloat(lat), lng: parseFloat(lng) };
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 16,
+      center: posisi,
+    });
+
+    new google.maps.Marker({
+      position: posisi,
+      map: map,
+      title: "Lokasi Anda",
+      icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+    });
+
+    // cari halte terdekat otomatis
+    const request = {
+      location: posisi,
+      radius: 1500,
+      keyword: "halte bus"
+    };
+
+    const service = new google.maps.places.PlacesService(map);
+    service.nearbySearch(request, function(results, status){
+      if(status === google.maps.places.PlacesServiceStatus.OK){
+        results.forEach(place => {
+          new google.maps.Marker({
+            position: place.geometry.location,
+            map: map,
+            title: place.name,
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+          });
+        });
+      }
+    });
+
+  } else {
+    // fallback kalau tidak dari radar
+    initDefaultMap();
+  }
+}
+
+function initDefaultMap(){
+  const bandung = { lat: -6.9175, lng: 107.6191 };
+  new google.maps.Map(document.getElementById("map"), {
+    zoom: 13,
+    center: bandung,
+  });
+}
+</script>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button onclick="goTo('routes.html')">➕</button>
+  <button onclick="goTo('notifications.html')">🔔</button>
+  <button onclick="goTo('profile.html')">👤</button>
+</nav>
+
+</body>
+</html>

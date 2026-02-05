@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Bantuan - BEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/bantuan.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+  <h2>❓ Pusat Bantuan BEMO</h2>
+
+  <!-- Kontak CS -->
+  <div class="card" style="padding:16px; margin-top:16px;">
+    <strong>Hubungi Customer Service</strong><br><br>
+
+    <button onclick="hubungiWA()">💬 WhatsApp CS</button><br><br>
+    <button onclick="hubungiEmail()">📧 Email CS</button>
+  </div>
+
+  <!-- FAQ -->
+  <div style="margin-top:24px;">
+    <h3>Pertanyaan Umum</h3>
+
+    <div class="menu-card" onclick="toggleFAQ(1)">
+      Bagaimana cara membeli tiket?
+    </div>
+    <div id="faq1" class="card" style="display:none; padding:12px; margin-bottom:10px;">
+      Masuk ke menu Tiket, pilih rute, lalu lakukan pembayaran.
+    </div>
+
+    <div class="menu-card" onclick="toggleFAQ(2)">
+      Bagaimana mencari shelter terdekat?
+    </div>
+    <div id="faq2" class="card" style="display:none; padding:12px; margin-bottom:10px;">
+      Masuk ke menu Shelter lalu klik "Cari Shelter Terdekat".
+    </div>
+
+    <div class="menu-card" onclick="toggleFAQ(3)">
+      Bagaimana melihat rute bus?
+    </div>
+    <div id="faq3" class="card" style="display:none; padding:12px;">
+      Masuk ke menu Rute dan pilih jenis bus yang ingin dilihat.
+    </div>
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button>➕</button>
+  <button>🔔</button>
+  <button onclick="goTo('profile.html')">👤</button>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Angkot - BEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/angkot.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+  <h2>🚕 Angkot Bandung</h2>
+
+  <div class="menu-card" onclick="pilihAngkot('ledeng')">Ledeng – Alun-alun</div>
+  <div class="menu-card" onclick="pilihAngkot('cicaheum')">Cicaheum – Dago</div>
+
+  <div id="hasilAngkot" style="margin-top:20px;"></div>
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button class="active">🚕</button>
+  <button>🔔</button>
+  <button>👤</button>
+</nav>
+
+</body>
+</html>

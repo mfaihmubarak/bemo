@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Profil - BEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/profile.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+  <h2>👤 Akun Saya</h2>
+
+  <div class="profile-card">
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+    <h3>BEMO User</h3>
+    <p>user@email.com</p>
+  </div>
+
+  <div class="profile-actions">
+    <div class="menu-card" onclick="editProfil()">✏️ Edit Profil</div>
+    <div class="menu-card" onclick="riwayat()">📜 Riwayat Perjalanan</div>
+    <div class="menu-card" onclick="logout()">🚪 Keluar</div>
+  </div>
+
+  <div id="hasilProfil" style="margin-top:20px;"></div>
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button onclick="goTo('routes.html')">➕</button>
+  <button onclick="goTo('notifications.html')">🔔</button>
+  <button onclick="goTo('profile.html')">👤</button>
+</nav>
+
+</body>
+</html>

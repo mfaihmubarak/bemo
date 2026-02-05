@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rute - BEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/routes.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+  <h2>🧭 Rute Transportasi</h2>
+
+  <div class="rute-grid">
+
+    <div class="feature-item" onclick="pilihRute('TMB')">
+      <div class="icon-circle">
+        <img src="img/tmb.png">
+      </div>
+      <span>Trans Metro Bandung</span>
+    </div>
+
+    <div class="feature-item" onclick="pilihRute('Bus Sekolah')">
+      <div class="icon-circle">
+        <img src="img/bussekolah.png">
+      </div>
+      <span>Bus Sekolah</span>
+    </div>
+
+    <div class="feature-item" onclick="pilihRute('Bandros')">
+      <div class="icon-circle">
+        <img src="img/bandros.png">
+      </div>
+      <span>Bandros</span>
+    </div>
+
+    <div class="feature-item" onclick="pilihRute('Angkot')">
+      <div class="icon-circle">
+        <img src="img/angkot.png">
+      </div>
+      <span>Angkot</span>
+    </div>
+
+  </div>
+
+  <div id="hasilRute" style="margin-top:20px;"></div>
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button onclick="goTo('routes.html')">➕</button>
+  <button onclick="goTo('notifications.html')">🔔</button>
+  <button onclick="goTo('profile.html')">👤</button>
+</nav>
+
+</body>
+</html>

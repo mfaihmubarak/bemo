@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Semua Bus - BEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>\
+<script defer src="js/semuabus.js"></script>
+<body>
+
+<div class="app-container">
+  <h2>🚌 Daftar Semua Layanan Bus Bandung</h2>
+
+  <div class="bus-grid">
+
+  <div class="bus-item" onclick="bukaTMB()">
+    <img src="img/tmb.png">
+    <span>TMB</span>
+  </div>
+
+  <div class="bus-item" onclick="bukaTransJabar()">
+    <img src="img/transmetrojabar.png">
+    <span>Trans Jabar</span>
+  </div>
+
+  <div class="bus-item" onclick="bukaBusSekolah()">
+    <img src="img/bussekolah.png">
+    <span>Bus Sekolah</span>
+  </div>
+
+  <div class="bus-item" onclick="bukaBandros()">
+    <img src="img/bandros.png">
+    <span>Bandros</span>
+  </div>
+
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button>➕</button>
+  <button>🔔</button>
+  <button onclick="goTo('profile.html')">👤</button>
+</nav>
+
+<script>
+function bukaLink(url){
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Bus Terdekat - BEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/busdekat.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+
+  <h2>🚌 Cari Bus / Shelter Terdekat</h2>
+
+  <div class="card" style="padding:16px; margin-top:16px; text-align:center;">
+    <p>Klik tombol di bawah untuk mendeteksi lokasi Anda dan mencari halte/bus terdekat.</p>
+
+    <button onclick="cariBusTerdekat()" style="margin-top:12px;">
+      📍 Deteksi Lokasi Saya
+    </button>
+  </div>
+
+  <div id="hasilBus" style="margin-top:20px;"></div>
+
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button>➕</button>
+  <button>🔔</button>
+  <button onclick="goTo('profile.html')">👤</button>
+</nav>
+
+</body>
+</html>

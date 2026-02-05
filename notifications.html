@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Notifikasi - BEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/notifications.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+  <h2>🔔 Notifikasi</h2>
+
+  <div id="notifList">
+    <div class="menu-card" onclick="bukaNotif(1)">
+      🚌 TMB tiba 5 menit lagi
+      <br><small>Baru saja</small>
+    </div>
+
+    <div class="menu-card" onclick="bukaNotif(2)">
+      🎫 Tiket berhasil dibeli
+      <br><small>10 menit lalu</small>
+    </div>
+
+    <div class="menu-card" onclick="bukaNotif(3)">
+      📢 Laporan diproses
+      <br><small>1 jam lalu</small>
+    </div>
+  </div>
+
+  <div id="detailNotif" style="margin-top:20px;"></div>
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button onclick="goTo('routes.html')">➕</button>
+  <button onclick="goTo('notifications.html')">🔔</button>
+  <button onclick="goTo('profile.html')">👤</button>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>BEMO – Mobile Next Gen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+  <div class="app-container">
+    <!-- ===== TOP HEADER ===== -->
+<div class="top-header">
+  <div class="header-inner">
+    <img src="img/logobemo.png" class="logo-bemo">
+    <span>BANDUNG EASY MOBILITY</span>
+  </div>
+</div>
+
+<!-- ===== USER GREETING CARD ===== -->
+<div class="user-card" onclick="goTo('profile.html')">
+  <div class="user-left">
+    <div class="user-icon">👤</div>
+    <div class="user-text">
+      Hi! <strong id="namaUser">Muhammad Faih</strong>
+    </div>
+  </div>
+  <div class="arrow">›</div>
+</div>
+
+    <!-- Header -->
+    <header class="app-header">
+      <h1>BEMO</h1>
+      <span>Mobile Next Gen</span>
+    </header>
+
+    <!-- Mode Demo -->
+    <div class="demo-banner">
+      Mode Demo Prototype – BEMO Mobile Next Gen
+    </div>
+
+    <!-- Search -->
+    <div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Mau ke mana hari ini?">
+</div>
+
+    <!-- Google Maps Preview -->
+<div class="maps-preview">
+  <iframe 
+    src="https://www.google.com/maps?q=Bandung&output=embed"
+    width="100%" 
+    height="240" 
+    style="border:0; border-radius:16px;"
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+  
+  <!-- Panel Halte Terdekat -->
+<div class="nearest-halte" onclick="cariHalteTerdekat()">
+  <div class="halte-left">
+    <small>Halte terdekat</small>
+    <div>Lihat halte terdekat</div>
+  </div>
+  <div class="halte-right">➜</div>
+</div>
+
+</div>
+
+    <div class="feature-grid">
+
+  <!-- BARIS 1 -->
+  <div class="feature-item" onclick="goTo('ticket.html')">
+    <div class="icon-circle">
+      <img src="img/eticket.png">
+    </div>
+    <span>Tiket</span>
+  </div>
+
+  <div class="feature-item" onclick="goTo('routes.html')">
+    <div class="icon-circle">
+      <img src="img/routes.png">
+    </div>
+    <span>Rute</span>
+  </div>
+
+  <div class="feature-item" onclick="goTo('busdekat.html')">
+    <div class="icon-circle">
+      <img src="img/busterdekat.png">
+    </div>
+    <span>Bus Terdekat</span>
+  </div>
+
+  <!-- BARIS 2 -->
+  <div class="feature-item" onclick="goTo('semuabus.html')">
+    <div class="icon-circle">
+      <img src="img/semuabus.png">
+    </div>
+    <span>Semua Bus</span>
+  </div>
+
+  <div class="feature-item" onclick="goTo('news.html')">
+    <div class="icon-circle">
+      <img src="img/news.png">
+    </div>
+    <span>Berita</span>
+  </div>
+
+  <div class="feature-item" onclick="goTo('shelter.html')">
+    <div class="icon-circle">
+      <img src="img/shelter.png">
+    </div>
+    <span>Shelter</span>
+  </div>
+
+  <!-- BARIS 3 -->
+  <div class="feature-item" onclick="goTo('report.html')">
+    <div class="icon-circle">
+      <img src="img/aduan.png">
+    </div>
+    <span>Aduan</span>
+  </div>
+
+  <div class="feature-item" onclick="goTo('petatematik.html')">
+  <div class="icon-circle">
+    <img src="img/petatematik.png">
+  </div>
+  <span>Peta Tematik</span>
+</div>
+
+  <div class="feature-item" onclick="goTo('boseh.html')">
+    <div class="icon-circle">
+      <img src="img/boseh.png">
+    </div>
+    <span>Boseh</span>
+  </div>
+
+  <div class="feature-item" onclick="goTo('transjabar.html')">
+    <div class="icon-circle">
+      <img src="img/transmetrojabar.png">
+    </div>
+    <span>Trans Metro</span>
+  </div>
+
+  <!-- BARIS 4 -->
+  <div class="feature-item" onclick="goTo('bandros.html')">
+    <div class="icon-circle">
+      <img src="img/bandros.png">
+    </div>
+    <span>Bandros</span>
+  </div>
+
+  <div class="feature-item" onclick="goTo('busschool.html')">
+    <div class="icon-circle">
+      <img src="img/bussekolah.png">
+    </div>
+    <span>Bus Sekolah</span>
+  </div>
+
+  <div class="feature-item" onclick="goTo('angkot.html')">
+    <div class="icon-circle">
+      <img src="img/angkot.png">
+    </div>
+    <span>Angkot</span>
+  </div>
+
+  <!-- BARIS 5 (SISA 2 IKON) -->
+  <div class="feature-item" onclick="goTo('bantuan.html')">
+    <div class="icon-circle">
+      <img src="img/bantuan.png">
+    </div>
+    <span>Bantuan</span>
+  </div>
+
+</div>
+
+<!-- GRID BARU 1 BARIS -->
+<div class="bandung-row" onclick="goTo('bandung.html')">
+  <div class="bandung-card">
+    <img src="img/bandung.png">
+    <span>Ketahui Tentang Bandung</span>
+  </div>
+</div>
+
+  </div> <!-- PENUTUP app-container -->
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button onclick="goTo('routes.html')">➕</button>
+  <button onclick="goTo('notifications.html')">🔔</button>
+  <button onclick="goTo('profile.html')">👤</button>
+</nav>
+
+<script>
+window.onload = function(){
+
+  const ai = document.getElementById("ai-fot");
+
+  let isDown = false;
+  let offset = [0,0];
+
+  ai.addEventListener('mousedown', function(e){
+    isDown = true;
+    offset = [
+      ai.offsetLeft - e.clientX,
+      ai.offsetTop - e.clientY
+    ];
+  });
+
+  document.addEventListener('mouseup', function(){
+    isDown = false;
+  });
+
+  document.addEventListener('mousemove', function(e){
+    if(!isDown) return;
+    ai.style.left = (e.clientX + offset[0]) + 'px';
+    ai.style.top  = (e.clientY + offset[1]) + 'px';
+  });
+
+  /* ===== DOUBLE CLICK MASUK AI ===== */
+ai.addEventListener("dblclick", () => {
+  window.location.href = "ai.html";
+});
+};
+</script>
+
+<!-- RADAR SCAN -->
+<div id="radarScan" class="radar-overlay">
+  <div class="radar-circle"></div>
+  <div class="radar-text">Mencari halte terdekat...</div>
+</div>
+
+</body>
+</html>
+
+<!-- FLOATING AI -->
+<div id="ai-fot">
+  <div class="ai-bubble">
+    Hai! Aku Asisten AI<br>
+    Tanya aku kalau bingung ya 😊
+  </div>
+  <img src="img/ai.png" alt="AI Assistant">
+</div>
+

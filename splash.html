@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEMO Loading</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:rgb(246, 245, 245);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  font-family:sans-serif;
+  overflow:hidden;
+}
+
+/* Logo */
+.logo{
+  width:160px;
+  margin-bottom:60px;
+  animation: fade 1.2s ease-in-out;
+}
+
+/* Loading bar container */
+.loader{
+  width:220px;
+  height:22px;
+  border-radius:20px;
+  border:3px solid #0aa;
+  overflow:hidden;
+  box-shadow:0 0 20px rgba(0,255,255,0.6);
+}
+
+/* Isi loading */
+.progress{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#00ffe1,#3aa0ff);
+  animation:load 3s linear forwards;
+}
+
+/* Animasi */
+@keyframes load{
+  to{ width:100%; }
+}
+
+@keyframes fade{
+  from{opacity:0; transform:scale(.8)}
+  to{opacity:1; transform:scale(1)}
+}
+</style>
+</head>
+
+<body>
+
+<img src="img/logobemo.png" class="logo">
+
+<div class="loader">
+  <div class="progress"></div>
+</div>
+
+<script>
+setTimeout(()=>{
+  window.location.href = "index.html";
+},3000);
+</script>
+
+</body>
+</html>

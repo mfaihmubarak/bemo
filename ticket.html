@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiket - BEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/ticket.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+  <h2>🎫 Pembelian Tiket</h2>
+
+  <div class="card" style="padding:16px;">
+    <label>Pilih Transportasi</label><br>
+    <select id="jenisTiket">
+      <option value="TMB">TMB</option>
+      <option value="Angkot">Angkot</option>
+      <option value="Bandros">Bandros</option>
+      <option value="Trans Jabar">Trans Jabar</option>
+    </select>
+
+    <br><br>
+
+    <label>Jumlah Tiket</label><br>
+    <input type="number" id="jumlahTiket" value="1" min="1">
+
+    <br><br>
+
+    <button onclick="beliTiket()">Beli Tiket</button>
+  </div>
+
+  <div id="hasilTiket" style="margin-top:20px;"></div>
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button class="active">🎫</button>
+  <button>🔔</button>
+  <button>👤</button>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>BEMO AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/ai.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+  <h2>🤖 BEMO AI</h2>
+
+  <div id="chatBox" class="chat-box">
+    <div class="chat bot">
+      <div class="bubble">Halo! Saya BEMO AI. Tanyakan apa saja.</div>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Tulis pesan...">
+    <button onclick="kirimPesan()">Kirim</button>
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button class="active">🤖</button>
+  <button>🔔</button>
+  <button>👤</button>
+</nav>
+
+<script>
+const ai = document.getElementById("ai-fot");
+
+let drag = false;
+let offsetX, offsetY;
+
+ai.onmousedown = function(e){
+  drag = true;
+  offsetX = e.clientX - ai.offsetLeft;
+  offsetY = e.clientY - ai.offsetTop;
+  ai.style.cursor = "grabbing";
+};
+
+document.onmousemove = function(e){
+  if(!drag) return;
+  ai.style.left = (e.clientX - offsetX) + "px";
+  ai.style.top  = (e.clientY - offsetY) + "px";
+};
+
+document.onmouseup = function(){
+  drag = false;
+  ai.style.cursor = "grab";
+};
+</script>
+
+
+</body>
+</html>

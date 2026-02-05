@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Bus Sekolah - BEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+  <script defer src="js/busschool.js"></script>
+</head>
+<body>
+
+<div class="app-container">
+  <h2>🎓 Bus Sekolah</h2>
+
+  <div class="menu-card" onclick="pilihBusSekolah('sman3')">SMAN 3 Bandung</div>
+  <div class="menu-card" onclick="pilihBusSekolah('smpn1')">SMPN 1 Bandung</div>
+  <div class="menu-card" onclick="pilihBusSekolah('sman5')">SMAN 5 Bandung</div>
+
+  <div id="hasilBusSekolah" style="margin-top:20px;"></div>
+</div>
+
+<nav class="bottom-nav">
+  <button onclick="goHome()">🏠</button>
+  <button onclick="goTo('map.html')">🗺️</button>
+  <button class="active">🎓</button>
+  <button>🔔</button>
+  <button>👤</button>
+</nav>
+
+</body>
+</html>
